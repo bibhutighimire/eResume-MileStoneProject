@@ -9,21 +9,10 @@ var reenteremail = document.getElementById("reenteremail");
 var subject = document.getElementById("subject");
 var message = document.getElementById("message");
 
-// form.addEventListener("submit", (c) => {
-
-//     c.preventDefault();
-//     CheckInputs();
-//     // sendEmail();
-// });
 
  document.getElementById("sendEmailLink").addEventListener("click", (c) => {
-
      c.preventDefault();
      checkInputs();
-     
-   
-
-
  });
 
 function redirect()
@@ -31,7 +20,30 @@ function redirect()
     console.log("hi from redirect");
     window.location.href = "mailto:ghimirebibhuti@gmail.com";
 }
+//https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
+function swearWordsTracker() {  
+    let hasSwearWords=false;
+    var restrictedWords = new Array("kill", "fight", "slap");  
+    var txtInput = document.getElementById("message").value;  
+    var error = 0;  
+    for (var i = 0; i < restrictedWords.length; i++) {  
+        var val = restrictedWords[i];  
+        if ((txtInput.toLowerCase()).indexOf(val.toString()) > -1) {  
+            error = error + 1;  
 
+        }  
+    }  
+
+    if (error > 0) {  
+        ErrorResult(message, "You have used BAD word in the message. We will not tolerate this.");
+        hasSwearWords=true;        
+    }  
+    else {  
+        redirect();       
+    }  
+    
+}  
+//end of https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
 function checkInputs() {
 
     console.log("hi from check input");
@@ -117,11 +129,9 @@ let hasErrors=false;
     //https://stackoverflow.com/questions/14452524/show-alert-if-any-bad-filtered-word-is-present-in-form-input
 
     if(hasErrors===false){
-        redirect();
+        swearWordsTracker();
      }
-    //return hasErrors;
-
-console.log(hasErrors);
+  
 
 }
 function ErrorResult(input, message) {
