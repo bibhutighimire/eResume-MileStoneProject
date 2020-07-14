@@ -9,8 +9,39 @@ body {
 section h2 {
     font-size: 22px;
     color: rgb(2, 31, 21);
-    padding-bottom: 15px;
+  padding:10px 0px;
+    height: auto;
+    background-color: #5ab15d;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 22px;
 }  
+main h2 {
+    padding:10px 0px;
+        font-size: 22px;
+        color: rgb(2, 31, 21);
+        height: auto;
+        background-color: #5ab15d;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 22px;
+   
+    
+}
+main figure img {
+    width: 100%;
+    padding-bottom: 20px;
+
+}
+figcaption {
+    font-size: 18px;
+    color: rgb(2, 31, 21);
+    padding-bottom: 20px;
+    text-decoration: underline;
+
+}
 p {
     font-size: 16px;
     color: rgb(2, 31, 21);
@@ -75,6 +106,9 @@ li a:active {
     text-decoration: underline;
   }
 section {
+    padding:0px;
+}
+main {
     padding:15px;
 }
 section small {
@@ -100,12 +134,44 @@ input[type=text],input[type=email], select,  textarea {
     border-radius: 4px;
     cursor: pointer;
   }
+  button[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
   .form-control.success input {
       border-color:1px solid rgb(26, 148, 26);
       visibility: visible;
   }
-      
+  .form-control.success button {
+    border-color:1px solid rgb(26, 148, 26);
+    visibility: visible;
+}
+figure {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px dotted black;
+    margin-bottom: 15px;
+    
+} 
+
+figure a {
+    
+    background-color: #4CAF50;
+    color: white;
+    
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 15px;
+    padding:6px 0px;
+} 
   
+
   .form-control.error input {
     border-color:1px solid rgb(88, 10, 10);
     

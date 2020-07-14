@@ -105,3 +105,26 @@ function SuccessResult(input) {
 function ValidateEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+function sendEmail() {
+    const fnamevalue = fname.value.trim();
+    const lnamevalue = lname.value.trim();
+    const emailvalue = email.value.trim();
+    const reenteremailvalue = reenteremail.value.trim();
+    const subjectvalue = subject.value.trim();
+    const messagevalue = message.value.trim();
+
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "bibhuti.ghimire@gmail.com",
+        Password : "bibhutighimire",
+        FirstName : fnamevalue,
+        LastName : lnamevalue,        
+        To : "ghimirebibhuti@gmail.com",
+        From : "bibhuti.ghimire@gmail.com",
+        Subject : subjectvalue,
+        Body : messagevalue
+    }).then(
+      message => alert("Mail Sent!")
+    );
+}
