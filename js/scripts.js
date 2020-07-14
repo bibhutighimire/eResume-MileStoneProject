@@ -20,8 +20,9 @@ var message = document.getElementById("message");
 
      c.preventDefault();
      checkInputs();
+     
    
- redirect();
+
 
  });
 
@@ -32,6 +33,7 @@ function redirect()
 }
 
 function checkInputs() {
+
     console.log("hi from check input");
     const fnamevalue = fname.value.trim();
     console.log(fnamevalue);
@@ -53,7 +55,6 @@ let hasErrors=false;
     }
     else {
         SuccessResult(fname);
-        hasErrors=false;
     }
     if (lnamevalue === "") {
         ErrorResult(lname, "Last Name can not be blank");
@@ -61,25 +62,29 @@ let hasErrors=false;
     }
     else {
         SuccessResult(lname);
-        hasErrors=false;
     }
     if (emailvalue === "") {
         ErrorResult(email, "Email Address can not be blank");
+        hasErrors=true;
     }
     else if (!ValidateEmail(emailvalue)) {
         ErrorResult(email, "Enter valid Email Address");
+        hasErrors=true;
     }
     else {
         SuccessResult(email);
     }
     if (reenteremailvalue === "") {
         ErrorResult(reenteremail, "Email Address can not be blank");
+        hasErrors=true;
     }
     else if (!ValidateEmail(reenteremailvalue)) {
         ErrorResult(reenteremail, "Enter valid Email Address");
+        hasErrors=true;
     }
     else if (emailvalue !== reenteremailvalue) {
         ErrorResult(reenteremail, "Email Address entered do not match")
+        hasErrors=true;
     }
     else {
         SuccessResult(reenteremail);
@@ -88,6 +93,7 @@ let hasErrors=false;
     if (subjectvalue === "") {
 
         ErrorResult(subject, "Subject can not be blank");
+        hasErrors=true;
 
     }
     else {
@@ -97,10 +103,12 @@ let hasErrors=false;
     if (messagevalue === "") {
 
         ErrorResult(message, "Message can not be blank");
+        hasErrors=true;
 
     }
     else if (messagevalue === "feldercarb" || messagevalue === "frack" || messagevalue === "skinjob" || messagevalue === "vulgacarb"  || messagevalue === "bitch") {
         ErrorResult(message, "Message should be in Proper Words");
+        hasErrors=true;
     }
 
     else {
@@ -108,7 +116,12 @@ let hasErrors=false;
     }
     //https://stackoverflow.com/questions/14452524/show-alert-if-any-bad-filtered-word-is-present-in-form-input
 
+    if(hasErrors===false){
+        redirect();
+     }
+    //return hasErrors;
 
+console.log(hasErrors);
 
 }
 function ErrorResult(input, message) {
