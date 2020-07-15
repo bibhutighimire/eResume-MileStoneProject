@@ -1,33 +1,43 @@
 // Citation
 //@Link https://www.youtube.com/watch?v=rsd4FNGTRBw
 
-var form = document.getElementById("form");
-var fname = document.getElementById("fname");
-var lname = document.getElementById("lname");
-var email = document.getElementById("email");
-var reenteremail = document.getElementById("reenteremail");
-var subject = document.getElementById("subject");
-var message = document.getElementById("message");
+let form = document.getElementById("form");
+let fname = document.getElementById("fname");
+let lname = document.getElementById("lname");
+let email = document.getElementById("email");
+let reenteremail = document.getElementById("reenteremail");
+let subject = document.getElementById("subject");
+let message = document.getElementById("message");
 
 
- document.getElementById("sendEmailLink").addEventListener("click", (c) => {
-     c.preventDefault();
+ const c=document.getElementById("sendEmailLink")
+ if(c) {
+     c.addEventListener("click", (e) => {
+     e.preventDefault();
      checkInputs();
  });
+}
 
 function redirect()
 {
     console.log("hi from redirect");
     window.location.href = "mailto:ghimirebibhuti@gmail.com";
+    fname.value = "";
+ lname.value = "";
+ email.value = "";
+ reenteremail.value = "";
+ subject.value = "";
+ message.value = "";
+
 }
 //https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
 function swearWordsTracker() {  
     let hasSwearWords=false;
-    var restrictedWords = new Array("kill", "fight", "slap");  
-    var txtInput = document.getElementById("message").value;  
-    var error = 0;  
-    for (var i = 0; i < restrictedWords.length; i++) {  
-        var val = restrictedWords[i];  
+    let restrictedWords = new Array("kill", "fight", "slap","feldercarb", "frack", "skinjob", "vulgacarb");  
+    let txtInput = document.getElementById("message").value;  
+    let error = 0;  
+    for (let i = 0; i < restrictedWords.length; i++) {  
+        let val = restrictedWords[i];  
         if ((txtInput.toLowerCase()).indexOf(val.toString()) > -1) {  
             error = error + 1;  
 
@@ -53,12 +63,10 @@ function checkInputs() {
     const emailvalue = email.value.trim();
     const reenteremailvalue = reenteremail.value.trim();
     const subjectvalue = subject.value.trim();
-    let mmessagevalue = message.value.trim();
+    let messagevalue = message.value.trim();
     //https://stackoverflow.com/questions/14452524/show-alert-if-any-bad-filtered-word-is-present-in-form-input
     //https://stackoverflow.com/questions/17384992/how-to-block-bad-words-upon-form-submit
 
-    let badwords = /crap|ugly|brat|fool|fuck|fucking|f\*cking|f\*ck|bitch|b\*tch|shit|sh\*t|fool|dumb|couch potato|arse|arsehole|asshole|\*ssh\*l\*|\*\*\*\*|c\*ck|\*\*\*\*sucker|c\*cks\*ck\*r|\*\*\*\*|c\*nt|dickhead|d\*c\*h\*a\*|\*\*\*\*|f\*c\*|\*\*\*\*wit|f\*ckw\*t|fuk|f\*k|fuking|f\*k\*ng|mother\*\*\*\*er|m\*th\*rf\*ck\*r|\*\*\*\*\*\*|n\*gg\*r|pussy|p\*ssy|\*\*\*\*|sh\*t|wanker|w\*nk\*r|wankers|w\*nk\*rs|whore|wh\*r\*|slag| sl\*g|\*\*\*\*\*|b\*tch|f u c k|f\*c\*|b.i.t.c.h|b\*tch|d-i-c-k|d\*\*\*/gi;
-var messagevalue=mmessagevalue.replace(badwords,"*****");
 let hasErrors=false;
 
     if (fnamevalue === "") {
@@ -154,3 +162,24 @@ function ValidateEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
+//back to top button
+//Get the button
+const mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+//end of back to top button https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
