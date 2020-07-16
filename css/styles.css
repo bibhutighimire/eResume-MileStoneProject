@@ -74,6 +74,7 @@ article {
 main .grid-container section article {
     margin-bottom: 15px;
     border-bottom: 3px dotted black;
+    border-left: 7px solid black;
 }
 main .grid-container section article h3 {
 
@@ -174,7 +175,7 @@ li a {
   } 
 li a:hover {
    
-    color:rgb(13, 126, 134); 
+    color:rgb(207, 90, 22); 
     
     text-decoration: none; 
 }
@@ -218,24 +219,40 @@ main {
     padding: 0px;
 }
 #navbarForWorks {
-   display: flex;
-    justify-content: center;
+   
     margin: 25px 0 15px 0;
     background-color: white;
-  width: auto;
+  width: 100%;
+  height: auto;
 
 }
+#navbarForWorks nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
 #navbarForWorks nav a {
-
+    margin:0 10px 15px 0;
         background-color: #4CAF50;
         color: white;
-        padding: 10px;
+        width: 100px;
+        padding: 15px;
         border-bottom: 2px dotted black;
         border-radius: 4px;
         cursor: pointer;
+        text-align: center;
    
 
 }
+
+
+#skills ul li{
+    margin-bottom: 7px;
+    padding: 8px;
+    border-left: 4px solid black;
+}
+
 section small {
     
     visibility: hidden;
@@ -281,6 +298,7 @@ figure {
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     border-bottom: 2px dotted black;
+    
     margin-top: 15px;
     
 } 
@@ -345,7 +363,7 @@ footer p{
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: #4CAF50;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -353,7 +371,7 @@ footer p{
   }
   
   #myBtn:hover {
-    background-color: #555;
+    background-color: rgb(95, 6, 6);
   } 
 
   .desk{
@@ -375,12 +393,27 @@ main .grid-container section .portfolioGallery {
     margin: 0 15px 15px 0;
     height: 300px;
     width: 200px;
+    opacity: 0.7;
+}
+.portfolioGallery img:hover {
+    opacity: 1;
 }
 .grid-container section{
     
     display: grid;
     }
-
+#faIcon {
+    color:  #5ab15d;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#faIcon span{
+    color:  #5ab15d;
+    font-size: 15x;
+   
+    margin-bottom: 10px;
+}
 main .grid-container  h2 {
         padding:10px 5px;
             font-size: 18px;
@@ -391,20 +424,32 @@ main .grid-container  h2 {
         text-align: center;
         margin-bottom: 18px;
         line-height: 22px;
-       
-        
-    }
-.profile {
+       }
+       #socialMedia {
+           display: flex;
+           justify-content: center;
+
+       }
+       #socialMedia a img {
+           height: 40px;
+           width: 40px;
+           margin:20px;
+       }       
+#profile {
     display: grid;
     grid-template-columns: 2fr 1 fr;
-    border: 1px solid black;
-    justify-content: end;
-    grid-auto-flow: row;
+   
+    
 }
-    div article img {
+#profile article {
+    background: unset;
+    display: flex;
+    flex-direction: column;
+}
+     article img {
         height: 100px;
         width: 100px;
-        border: 2px solid  #5ab15d;
+        border: 1px solid  black;
     }
 @media screen and (max-width: 1060px) {
     .div-only-mobile{

@@ -11,6 +11,7 @@
     <!-- Linking reset and css style file -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Linking JS File -->
     <script src="js/scripts.js" defer></script>
@@ -22,6 +23,7 @@
             <img src="img/logo.png" alt="Logo">
             <h1>My e-Resume</h1>
         </header>
+        <!-- top navigation -->
         <nav>
             <ul>
                 <li><a href="index.html">Work Exp</a></li>
@@ -31,13 +33,24 @@
         </nav>
         <main>
             <div class="grid-container">
-                <h2>About Me</h2>
-                <section class="profile">
+                
+                <div id="profile">
 
 
                     <article>
+                        <h2>About Me</h2>
                         <img src="img/profilepicture.JPG" alt="Self Picture">
-                        <i style="font-size:24px" class="fa">&#xf0e0; : bibhuti@ualberta.ca</i>
+                        <div id="socialMedia">
+                         <a href="https://github.com/bibhutighimire"><img src="img/github-logo.png" alt="GitHub Link"></a>
+                         <a href="https://www.linkedin.com/in/bibhuti-ghimire-b9a83a6b/">  <img src="img/linkedinlogo.png" alt="LinkedIn Link"></a>
+
+                        </div>
+                        
+                     <div id="faIcon">
+                        <span class="fa fa-envelope" > : bibhuti@ualberta.ca</span>
+                        <span class="fa fa-phone" > : 240-779-4705</span>
+                        <span class="fa fa-home" > : Edmonton, AB [T6X5W7]</span>
+                     </div>
                     </article>
                     <aside>
                         <p> I am a web developer and I do have few years of work experience working as junior web
@@ -46,17 +59,39 @@
                             below. I am extremely soft spoken, kind and great team player. </p>
                     </aside>
 
-                </section>
+                </div>
                 <div id="navbarForWorks">
                     <nav>
                         <a href="#experience">Experience</a>
                         <a href="#education">Education</a>
                         <a href="#portfolio">Portfolio</a>
+                        <a href="#skillsets">Skills</a>
                     </nav>
                 </div>
-                <section></section>
-                <h2  id="experience">Work Experience</h2>
+                <h2 id="skillsets">Skills</h2>
+                <div id="skills">
+                    <ul>
+                        <li>Hypertext Markup Language 5 (HTML 5)</li>
+                        <li>Cascading Style Sheets (CSS)</li>
+                        <li>JavaScript</li>
+                        <li>C#</li>
+                        <li>ASP.NET CORE</li>
+                        <li>Database (SQL)</li>
+                        <li>React JS</li>
+                        <li>BashGit, GitHub </li>
+                        <li>GoogleFu & Documentation</li>
+                        <li>Trello Board</li>
+                            <li>Researching</li>  
+                        <li>Website Launch (Domain/FTP/cPanel)</li>
+                        <li>Redux</li>
+                        <li>WordPress</li>
+                        <li>PHP</li>
+                        <li>API, Axios</li>
+                         </ul>
+                </div>
+                
                 <section>
+                    <h2  id="experience">Work Experience</h2>
                     <article><h3>InFocus Print, Sign and Web (Springfield, Virginia, USA)</h3>
                     
                         <h3>Junior Web Developer and QA (12th March 2018 – 7th Feb 2020)</h3></article>
@@ -101,8 +136,9 @@
                     <p> IDE: Webstorm</p>
 
                 </section>
-                <h2 id="education">Education</h2>
+                
                 <section class="educationSection">
+                    <h2 id="education">Education</h2>
                     <article> <h3>Full Stack Web Development Course</h3>
                         <h3>University Of Alberta</h3>
                         <h3>Alberta, Canada</h3>
@@ -117,8 +153,9 @@
 
 
                 </section>
-                <h2 id="portfolio">Portfolio -  <a href="portfolio.html">Click here to check more works</a></h2>
+                
                 <section>
+                    <h2 id="portfolio">Portfolio -  <a href="portfolio.html">Click here to check more works</a></h2>
                     <div class="portfolioGallery">
                         <img src="img/goodlife.jpg" alt="goodlife biscuit">
                         <img src="img/mixbix.jpg" alt="mixbix biscuit">

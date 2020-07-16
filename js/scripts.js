@@ -17,30 +17,27 @@ let message = document.getElementById("message");
      checkInputs();
  });
 }
-
+//It will redirect to sending email step once check input function is completed
 function redirect()
 {
-    console.log("hi from redirect");
     //window.location.href = "mailto:ghimirebibhuti@gmail.com";
 
 //GETTING SUBJECT VALUE
     let subject = document.getElementById("subject").value;
-
+//GETTING message VALUE
 let message = document.getElementById("message").value;
-console.log(message);
-    console.log("above is message value from redirect");
     document.location.href = "mailto:ghimirebibhuti@gmail.com?subject="
     + subject +
          "&body="  + message ;
 
-
+//this will clear text box
 
     fname.value = "";
  lname.value = "";
  email.value = "";
  reenteremail.value = "";
- subject = "";
- message= "";
+ subject.value = "";
+ message.value = "";
 
 }
 //https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
@@ -62,16 +59,16 @@ function swearWordsTracker() {
         hasSwearWords=true;        
     }  
     else {  
+        //it goes to redirect function only if forms are checked properly with bad word tracker and input checker
         redirect();       
     }  
     
 }  
 //end of https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
+//checkinput function will check if there is any empty field in the contact form
 function checkInputs() {
 
-    console.log("hi from check input");
     const fnamevalue = fname.value.trim();
-    console.log(fnamevalue);
     const lnamevalue = lname.value.trim();
     const emailvalue = email.value.trim();
     const reenteremailvalue = reenteremail.value.trim();
@@ -152,15 +149,15 @@ let hasErrors=false;
     if(hasErrors===false){
         swearWordsTracker();
      }
-  
-
 }
+//function to deal with error result i.e. if there is empty input in contact form
 function ErrorResult(input, message) {
     const formcontrol = input.parentElement; //form-control
     const small = formcontrol.querySelector("small");
     small.innerText = message;
     formcontrol.className = "form-control error";
 }
+//function to deal with success result i.e. if there is no empty input in contact form
 function SuccessResult(input) {
     const formcontrol = input.parentElement; //form-control
     const small = formcontrol.querySelector("small");
@@ -171,6 +168,7 @@ function SuccessResult(input) {
 //@link https://www.w3resource.com/javascript/form/email-validation.php
 //This will check the validity of email address
 //https://codepen.io/FlorinPop17/pen/OJJKQeK
+
 function ValidateEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
@@ -197,18 +195,3 @@ function topFunction() {
 }
 //end of back to top button https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
 
-//sticky main>nav starts
-//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky
-// window.onscroll = function() {myFunction()};
-
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }
-//sticky main>nav ends as well as citation
