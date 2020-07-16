@@ -3,7 +3,7 @@
 }
 body {
     display: flex;
-   
+   justify-content: center;
     background-color: rgb(225, 237, 247);
     }
 section h2 {
@@ -61,7 +61,7 @@ main .grid-container section p {
         text-decoration: none;
 
 }
-mark {
+article {
     background-color: rgb(182, 236, 191);
     color: black;
     padding: 10px;
@@ -71,13 +71,13 @@ mark {
     margin-bottom: 10px;
     text-decoration: none;
   }
-main .grid-container section mark {
+main .grid-container section article {
     margin-bottom: 15px;
     border-bottom: 3px dotted black;
 }
-main .grid-container section mark h3 {
+main .grid-container section article h3 {
 
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: rgb(2, 31, 21);
    text-indent: 0%;
@@ -204,6 +204,28 @@ main {
     padding: 25px;
 }
 #navbar nav a {
+
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border-bottom: 2px dotted black;
+        border-radius: 4px;
+        cursor: pointer;
+   
+
+}
+.grid-container {
+    padding: 0px;
+}
+#navbarForWorks {
+   display: flex;
+    justify-content: center;
+    margin: 25px 0 15px 0;
+    background-color: white;
+  width: auto;
+
+}
+#navbarForWorks nav a {
 
         background-color: #4CAF50;
         color: white;
@@ -361,7 +383,7 @@ main .grid-container section .portfolioGallery {
 
 main .grid-container  h2 {
         padding:10px 5px;
-            font-size: 22px;
+            font-size: 18px;
             color:white;
             height: auto;
             background-color: #5ab15d;

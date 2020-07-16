@@ -21,13 +21,26 @@ let message = document.getElementById("message");
 function redirect()
 {
     console.log("hi from redirect");
-    window.location.href = "mailto:ghimirebibhuti@gmail.com";
+    //window.location.href = "mailto:ghimirebibhuti@gmail.com";
+
+//GETTING SUBJECT VALUE
+    let subject = document.getElementById("subject").value;
+
+let message = document.getElementById("message").value;
+console.log(message);
+    console.log("above is message value from redirect");
+    document.location.href = "mailto:ghimirebibhuti@gmail.com?subject="
+    + subject +
+         "&body="  + message ;
+
+
+
     fname.value = "";
  lname.value = "";
  email.value = "";
  reenteremail.value = "";
- subject.value = "";
- message.value = "";
+ subject = "";
+ message= "";
 
 }
 //https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
