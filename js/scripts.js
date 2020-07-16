@@ -183,3 +183,19 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 //end of back to top button https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+
+//sticky main>nav starts
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky
+// window.onscroll = function() {myFunction()};
+
+// var navbar = document.getElementById("navbar");
+// var sticky = navbar.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.classList.add("sticky")
+//   } else {
+//     navbar.classList.remove("sticky");
+//   }
+// }
+//sticky main>nav ends as well as citation

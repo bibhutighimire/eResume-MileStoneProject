@@ -3,7 +3,7 @@
 }
 body {
     display: flex;
-    justify-content: center;
+   
     background-color: rgb(225, 237, 247);
     }
 section h2 {
@@ -39,7 +39,7 @@ figcaption {
     font-size: 18px;
     color: rgb(2, 31, 21);
     padding-bottom: 20px;
-    text-decoration: underline;
+
 
 }
 @-o-viewport {
@@ -50,10 +50,54 @@ p {
     color: rgb(2, 31, 21);
     text-indent: 15px;
     margin-bottom: 10px;
+    text-decoration: none;
 }  
+main .grid-container section p {
+
+        font-size: 14px;
+        color: rgb(2, 31, 21);
+       text-indent: 0%;
+        margin-bottom: 10px;
+        text-decoration: none;
+
+}
+mark {
+    background-color: rgb(182, 236, 191);
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    color: rgb(2, 31, 21);
+   text-indent: 0%;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+main .grid-container section mark {
+    margin-bottom: 15px;
+    border-bottom: 3px dotted black;
+}
+main .grid-container section mark h3 {
+
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(2, 31, 21);
+   text-indent: 0%;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+main .grid-container section .educationSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+main .grid-container h2 a {
+    font-weight: bold;
+    color: white;
+}
 .container {
-background-color: rgb(227, 241, 237);
-border: 2px solid black;
+background-color: white;
+
 width: 1000px;
 justify-content: center;
 height: auto;
@@ -75,39 +119,66 @@ header h1 {
     font-size: 30px;
     line-height: 100px;
     text-align: center;
+    color: #4CAF50;
+    font-style: italic;
     
 }
 nav {
     margin-bottom: 15px;
 }
+
 nav ul {
     list-style-type: none;
     
     padding: 20px;
-    background-color: rgb(148, 248, 215);
+    background-color: #4CAF50;
     justify-content: center;
     display: flex;
     justify-content: space-evenly;
+   
+} 
+footer nav ul {
+    list-style-type: none;
+    
+    background-color: #4CAF50;
+    
+    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
+   
 } 
 nav li {
     display: inline;
-    color: black;    
-    text-decoration: none;    
+    border-right: 1px dotted white;
+    border-left: 1px dotted white;
+    padding: 0 5px;
     font-size: medium;    
+    text-decoration: none; 
+}
+footer nav li {
+    display: inline;
+    border-right: 1px dotted white;
+    border-left: 1px dotted white;
+    padding: 0 5px;
+    font-size: medium;    
+    text-decoration: none; 
 }
 li a {
     display: block;
-    color: rgb(5, 97, 66);
+    color: rgb(255, 255, 255);
     text-align: center;    
-    text-decoration: none;
+    
+    text-decoration: none; 
+    color:white;   
+    
   } 
 li a:hover {
    
-    color: rgb(2, 31, 21);
+    color:rgb(13, 126, 134); 
+    
+    text-decoration: none; 
 }
-li a:active {
-    text-decoration: underline;
-  }
+
 section {
     padding:0px;
    
@@ -117,12 +188,22 @@ main {
     width: 100%;
     height: auto;
 }
-main nav
-{
+
+.sticky {
+    position: fixed;
+    top: 0;    
+}
+
+#navbar {
+    
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 20px;
+    background-color: white;
+  width: auto;
+    padding: 25px;
 }
-main nav a {
+#navbar nav a {
 
         background-color: #4CAF50;
         color: white;
@@ -181,7 +262,10 @@ figure {
     margin-top: 15px;
     
 } 
-
+figcaption p {
+    text-decoration: none;
+    line-height: 30px;
+}
 figure a {
     
     background-color: #4CAF50;
@@ -216,9 +300,13 @@ figure a {
     background-color: #45a049;
   }
 footer {
-    height: 30px;
+    height: 150px;
     width: auto;
     border-top: 2px solid black;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
     
 }  
 footer p{
@@ -245,12 +333,72 @@ footer p{
   #myBtn:hover {
     background-color: #555;
   } 
+
+  .desk{
+    width:400px;
+    
+  }
+  .div-only-mobile{
+    width:400px;
+    
+  }
+
+main .grid-container section .portfolioGallery {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolioGallery img {
+    margin: 0 15px 15px 0;
+    height: 300px;
+    width: 200px;
+}
+.grid-container section{
+    
+    display: grid;
+    }
+
+main .grid-container  h2 {
+        padding:10px 5px;
+            font-size: 22px;
+            color:white;
+            height: auto;
+            background-color: #5ab15d;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 18px;
+        line-height: 22px;
+       
+        
+    }
+.profile {
+    display: grid;
+    grid-template-columns: 2fr 1 fr;
+    border: 1px solid black;
+    justify-content: end;
+    grid-auto-flow: row;
+}
+    div article img {
+        height: 100px;
+        width: 100px;
+        border: 2px solid  #5ab15d;
+    }
 @media screen and (max-width: 1060px) {
+    .div-only-mobile{
+        visibility:hidden;
+        }
     #primary { width:67%; }
     #secondary { width:30%; margin-left:3%;}  
 }
 /* Tabled Portrait */
 @media screen and (max-width: 768px) {
+    .desk{
+        visibility:hidden;
+        }
+       .div-only-mobile{
+        visibility:visible;
+        }
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
 }
