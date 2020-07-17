@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    display: flex;
+
    justify-content: center;
     background-color: rgb(225, 237, 247);
     }
@@ -42,9 +42,7 @@ figcaption {
 
 
 }
-@-o-viewport {
-	width: 320px;
-}
+
 p {
     font-size: 16px;
     color: rgb(2, 31, 21);
@@ -98,10 +96,9 @@ main .grid-container h2 a {
 }
 .container {
 background-color: white;
-
-width: 1000px;
 justify-content: center;
-height: auto;
+width: 100%;
+
 }
 header {
     
@@ -109,6 +106,7 @@ header {
     width: auto;
     justify-content: space-between;
     padding: 15px;
+    min-height: 70px;
 }
 header img {
     
@@ -374,21 +372,9 @@ footer p{
     background-color: rgb(95, 6, 6);
   } 
 
-  .desk{
-    width:400px;
-    
-  }
-  .div-only-mobile{
-    width:400px;
-    
-  }
 
-main .grid-container section .portfolioGallery {
-    display: flex;
 
-    flex-wrap: wrap;
-    justify-content: center;
-}
+
 .portfolioGallery img {
     margin: 0 15px 15px 0;
     height: 300px;
@@ -398,10 +384,7 @@ main .grid-container section .portfolioGallery {
 .portfolioGallery img:hover {
     opacity: 1;
 }
-.grid-container section{
-    
-    display: grid;
-    }
+
 #faIcon {
     color:  #5ab15d;
     font-size: 18px;
@@ -436,8 +419,8 @@ main .grid-container  h2 {
            margin:20px;
        }       
 #profile {
-    display: grid;
-    grid-template-columns: 2fr 1 fr;
+    display: flex;
+    flex-wrap: wrap;
    
     
 }
@@ -451,7 +434,65 @@ main .grid-container  h2 {
         width: 100px;
         border: 1px solid  black;
     }
-@media screen and (max-width: 1060px) {
+
+ /* Filter div styling for Portfolio    */
+.myBtnContainer {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+ .filterDiv {
+    display: flex;
+width: 200px;
+height: 300px;
+overflow: hidden;
+    flex-wrap: wrap;
+ 
+    
+    margin: 15px;
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .containerFilter {
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+
+  }
+  .containerFilter img{
+   
+    width: 200px;
+height: 300px;
+  
+   }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  /* Filter div ends for Portfolio */
+/* @media screen and (max-width: 1060px) {
     .div-only-mobile{
         visibility:hidden;
         }
@@ -468,4 +509,4 @@ main .grid-container  h2 {
         }
     #primary { width:100%; }
     #secondary { width:100%; margin:0; border:none; }
-}
+} */
