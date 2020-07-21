@@ -14,12 +14,12 @@ const c = document.getElementById("sendEmailLink")
 if (c) {
     c.addEventListener("click", (e) => {
         e.preventDefault();
-        checkInputs();
+        CheckInputs();
     });
 }
 //It will redirect to sending email step once check input function is completed
 //Using mailto: to append message, subject and body element of comtact form to outlook
-function redirect() {
+function Redirect() {
 
     //GETTING SUBJECT VALUE
     let subject = document.getElementById("subject").value;
@@ -35,7 +35,7 @@ function redirect() {
 }
 //https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
 //Below method will use for loop to check every word in message.value and compare it with restricted words . if any of the word matches with restricted word, error will be error++ and error message is generated as well as it prevents form from submitting.
-function swearWordsTracker() {
+function SwearWordsTracker() {
     let hasSwearWords = false;
     let restrictedWords = new Array("kill", "fight", "slap", "feldercarb", "frack", "skinjob", "vulgacarb");
     let txtInput = document.getElementById("message").value;
@@ -52,12 +52,12 @@ function swearWordsTracker() {
         hasSwearWords = true;
     } else {
         //it goes to redirect function only if forms are checked properly with bad word tracker and input checker
-        redirect();
+        Redirect();
     }
 }
 //end of https://www.c-sharpcorner.com/blogs/block-specific-bad-words-using-javascript-jquery
 //checkinput function will check if there is any empty field in the contact form
-function checkInputs() {
+function CheckInputs() {
 
     const fnamevalue = fname.value.trim();
     const lnamevalue = lname.value.trim();
@@ -122,9 +122,9 @@ function checkInputs() {
         SuccessResult(message);
     }
     //https://stackoverflow.com/questions/14452524/show-alert-if-any-bad-filtered-word-is-present-in-form-input
-    //After checking for input, the if loop will goto swearWordsTracker() method.
+    //After checking for input, the if loop will goto SwearWordsTracker() method.
     if (hasErrors === false) {
-        swearWordsTracker();
+        SwearWordsTracker();
     }
 }
 //function to deal with error result i.e. if there is empty input in contact form
